@@ -27,15 +27,7 @@ enum CameraHintData : int32_t {
     CAMERA_HINT_HIGH_FPS_VIDEO_RECORD_POWER = 7,
 };
 
-enum ExtPowerHint : int32_t {
-    VSYNC = 1,
-    INTERACTION = 2,
-    VIDEO_ENCODE = 3,
-    VIDEO_DECODE = 4,
-    LOW_POWER = 5,
-    SUSTAINED_PERFORMANCE = 6,
-    VR_MODE = 7,
-    LAUNCH = 8,
+enum ExtPowerHint : PowerHint {
     APP_PROFILE = 9,
     APP_LAUNCH = 10,
     SHIELD_STREAMING = 11,
