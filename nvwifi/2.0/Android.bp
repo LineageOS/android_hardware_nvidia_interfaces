@@ -5,11 +5,12 @@ hidl_interface {
     root: "vendor.nvidia.hardware",
     system_ext_specific: true,
     srcs: [
+        "types.hal",
         "INvSupplicant.hal",
+        "INvSupplicantCallback.hal",
     ],
     interfaces: [
         "android.hidl.base@1.0",
-        "vendor.nvidia.hardware.nvwifi@1.0",
     ],
     gen_java: true,
 }
