@@ -180,12 +180,13 @@ interface INvDisplay {
         );
 
     allmIsSupported(
+            HwcSvcDisplay display
         ) generates (
             bool value
         );
 
     allmEnable(
-            int32_t val1,
+            HwcSvcDisplay display,
             bool val2
         );
 };
