@@ -146,3 +146,14 @@ enum DeepISPFilter : int32_t {
     LANCZOS = 1,
     DEEPISP = 2,
 };
+
+enum HwcInputEvent : uint32_t {
+    USER_INTERACTION_START = 0,
+    USER_INTERACTION_END = 1,
+    MOVE_SLIDER = 2,
+    SLIDER_OFF = 3,
+    HORIZONTAL_SLIDER_ON = 4,
+    VERTICAL_SLIDER_ON = 5,
+    DEFAULT_MODE_LEFT_OR_TOP = 6,
+    DEFAULT_MODE_RIGHT_OR_BOTTOM = 7,
+};
