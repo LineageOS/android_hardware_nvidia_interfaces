@@ -4,144 +4,144 @@ import INvDeepISPCallback;
 
 interface INvDisplay {
     modeGetList(
-            int32_t display
+            HwcSvcDisplay display
         ) generates (
             vec<HwcSvcDisplayMode> modes
         );
 
     getMode(
-            int32_t display,
-            int32_t modeType
+            HwcSvcDisplay display,
+            HwcSvcModeType modeType
         ) generates (
             HwcSvcDisplayMode mode
         );
 
     modeSet(
-            int32_t display,
+            HwcSvcDisplay display,
             HwcSvcDisplayMode request
         );
 
     modeSetIndex(
-            int32_t display,
-            int32_t index
+            HwcSvcDisplay display,
+            uint32_t index
         );
 
     modeDefaultSetIndex(
-            int32_t display,
-            int32_t index
+            HwcSvcDisplay display,
+            uint32_t index
         );
 
     modeDefaultCommit(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     modeDefaultRollback(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     modeDefaultStore(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     modeDefaultGet(
-            int32_t display
+            HwcSvcDisplay display
         ) generates (
-            int32_t mode
+            uint32_t mode
         );
 
     modeDefaultDelete(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     modeDefaultDeleteAll(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     modeUpdate(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     modeMatchToContent(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     layerDepthPolicy(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     hdcpGetVersion(
-            int32_t display
+            HwcSvcDisplay display
         ) generates (
             int32_t version
         );
 
     edidGetInfo(
-            int32_t display
+            HwcSvcDisplay display
         ) generates (
             HwcSvcEdidInfo info
         );
 
     edidGetRaw(
-            int32_t i
+            HwcSvcDisplay display
         ) generates (
             vec<int8_t> edid
         );
 
     getUnderscan(
-            int32_t display
+            HwcSvcDisplay display
         ) generates (
             float underscan
         );
 
     setUnderscan(
-            int32_t display,
+            HwcSvcDisplay display,
             float underscan
         );
 
     getScanlineFence(
-            int32_t display,
+            HwcSvcDisplay display,
             HwcSvcSLFenceInfo info
         ) generates (
             int32_t ret
         );
 
     removeScanlineInterrupt(
-            int32_t display,
+            HwcSvcDisplay display,
             int32_t id
         );
 
     enableCrc(
-            int32_t display,
+            HwcSvcDisplay display,
             HwcSvcCrc crc
         ) generates (
             HwcSvcCrc ret
         );
 
     readCrc(
-            int32_t display,
+            HwcSvcDisplay display,
             HwcSvcCrc crc
         ) generates (
             HwcSvcCrc ret
         );
 
     getCrcFlipId(
-            int32_t display
+            HwcSvcDisplay display
         ) generates (
             HwcSvcCrc id
         );
 
     displayGetType(
-            int32_t display
+            HwcSvcDisplay display
         ) generates (
             HwcSvcDisplayType type
         );
 
     displayAddWindow(
-            int32_t display
+            HwcSvcDisplay display
         );
 
     enableGsync(
-            int32_t display,
+            HwcSvcDisplay display,
             bool enable
         );
 
@@ -157,11 +157,11 @@ interface INvDisplay {
         );
 
     vprSetFloor(
-            int32_t size
+            uint32_t size
         );
 
     notifyDeepIspInputEvent(
-            int32_t event,
+            HwcInputEvent event,
             float val
         );
 
